@@ -1,6 +1,6 @@
-    import streamlit as st
+import streamlit as st
 
-    def recycling_bot(user_input):
+def recycling_bot(user_input):
         user_input = user_input.lower()
 
         if "페트병" in user_input or "플라스틱 뚜껑" in user_input:
@@ -32,8 +32,8 @@
         else:
             return "죄송해요, 해당 품목은 아직 학습되지 않았어요."
 
-    st.title("♻️ 분리수거 챗봇: 쓰까비")
-    user_input = st.text_input("무엇을 버릴지 입력해 주세요:")
-    if user_input:
+st.title("♻️ 분리수거 챗봇: 쓰까비")
+user_input = st.text_input("무엇을 버릴지 입력해 주세요:")
+if user_input:
         response = recycling_bot(user_input)
         st.write("🤖", response)
